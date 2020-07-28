@@ -100,7 +100,7 @@ header label i{
 /* container */
 
 header{
-    background: url('img/sgr.jpg') no-repeat;
+    background: url('sgr.jpg') no-repeat;
     background-size: cover;
     position: static;
     height: 300px;
