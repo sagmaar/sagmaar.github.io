@@ -4,13 +4,46 @@
     text-decoration: none;
     padding: 0;
 }
+:root{
+	--color-main: #4F8334;
+    --color-hover: #213040;
+    --color-link: #63A742; 
+    --color-white: #fff;
+}
+::-webkit-scrollbar {
+    width: 11px;
+    height: auto;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 8px #4F8334;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-main) ;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-link) ;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--color-link) ;
+}
+
 
 body{
     background: #f4f4f4;
     font-family: sans-serif;
 }
+button:hover, a:hover{
+    background: var(--color-hover);
+}
 header{
-    background:  #0089ca;
+    background:  var(--color-main) ;
     height: 300px;
     overflow: none;
     position: fixed;
@@ -21,30 +54,32 @@ header h1{
     padding: 0px 10px;
     margin-left: 10px;
     font-size: 28px;
-    color: #fff;
+    color: var(--color-white) ;
     line-height: 70px;
 }
 #itop{
-    height: 22px;
+    text-align: center;
     width: 30px;
-    margin-top: px;
+    position: inherit;
+    margin-top: 0;
 }
 nav ul{
     padding-top: 15px;
     line-height: 5px;
     margin-right: 10%;
     float: left;
+    transition: ALL .99s ease ;
     
 }
 nav ul li{
     float: left;
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 5px;
     position: relative;
 }
 nav ul li a:active,nav ul li a:hover{
-    background: #fff;
-    color:  #0089ca;
+    background: var(--color-white) ;
+    color:  var(--color-main) ;
 }
 nav ul li a{
     display: block;
@@ -55,18 +90,18 @@ nav ul li a{
 nav ul li ul li a{
     display: block;
     font-size: 16px;
-    color: #fff;
+    color: var(--color-white) ;
     padding: 8px 14px;
 }
 
 nav ul li ul li a:hover{
-    background: #fff;
+    background: var(--color-white) ;
     padding: 8px 0px;
-    color:  #0089ca;
+    color:  var(--color-main) ;
 }
 nav ul li ul{
     position: absolute;
-    background:  #0089ca;
+    background:  var(--color-main) ;
     display: none;
     padding: 10px;
     border-radius: 0px 0px 10px 10px;
@@ -85,7 +120,7 @@ header input{
 }
 
 #checkbtn{
-    color: #fff;
+    color: var(--color-white) ;
     font-size: 25px;
     float: right;
     line-height: 75px;
@@ -100,15 +135,13 @@ header label i{
 /* container */
 
 header{
-    background: url('sgr.jpg') no-repeat;
-    background-color: #0089ac;
+    background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('img/sgr.jpg') no-repeat;
     background-size: cover;
     position: static;
-    height: 300px;
 }
 .conhed{
     max-width: 900px;
-    background: #fff;
+    background: var(--color-white) ;
     margin-left: 30px;
     margin: auto;
     padding: 10px;
@@ -140,18 +173,18 @@ section {
     height: 100%;
 }
 #second button, section button{
-    background: #0089ac;
+    background: var(--color-main) ;
     padding: 15px;
     border: none;
     margin-top: 25px;
     border-radius: 80px;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--color-white) ;
     font-weight: bold;    
 }
 #Second{
-    background: #0089ac;
-    color: #fff;
+    background: var(--color-main) ;
+    color: var(--color-white) ;
     width: 100%;
     position: relative;
     margin: 0;
@@ -165,7 +198,7 @@ section {
     margin-top: -200px;
     margin-bottom: 50px;
     border-radius: 50%;
-    border: 2px solid #0089ca;
+    border: 2px solid var(--color-main) ;
 }
 #Second p{
     word-spacing: 5px;
@@ -178,19 +211,24 @@ section {
 }
 
 #Second .box{
-    width: 350px;
-    background: #fff;
-    color: #0089ca;
+    width: 300px;
+    background: var(--color-white) ;
+    color: var(--color-main) ;
     height: 260px;
     margin: 20px;
+    margin-left: 06%;
     display:block;
     float: left;
     padding: 10px;
     margin-bottom: 40px;
     border-radius: 15px;
 }
+#Second .box:hover{
+    background:  var(--color-hover) ;
+    color:var(--color-white) ;
+}
 #Second .box h1{
-    padding: 20px;
+    padding: 10px;
     word-spacing: 10px;
     line-height: 30px;
 }
@@ -198,8 +236,12 @@ section {
     margin-top: -60px;
 }
 #Second button{
-    background: #fff;
-    color: #0089ca;
+    background: var(--color-white) ;
+    color: var(--color-main) ;
+}
+#Second button:hover{
+    background: var(--color-hover) ;
+    color: var(--color-white) ;
 }
 
 #third{
@@ -215,7 +257,7 @@ section {
     padding: 20px;
 }
 .boxleft p{
-    border-left: 3px solid #0089ca;
+    border-left: 3px solid var(--color-main) ;
     padding: 9px;
     padding-left: 10px;
     width: 90%;
@@ -240,34 +282,41 @@ section {
     display: block;
 }
 .Fourth .box{
-    background: #fff;
+    background: var(--color-white) ;
     text-align: center;
     display: inline-block;
     margin: 5px;
     margin-top: 90px;
-    margin-left: 55px;
+    margin-left: 06%;
     width: 40%;
     height: 170px;
-    border: #0089ca 3px solid;
+    border: var(--color-hover)  3px solid;
     border-radius: 10px;
     box-shadow: 2px 2px 20px black;
     float: left;
+}
+.Fourth .box:hover{
+    background: var(--color-main) ;
+    color: var(--color-white) ;
 }
 .Fourth img{
     height: 100px;
     margin-top: -10%;
     border-radius: 50%;
-    border: #0089ca 3px solid;
+    border: var(--color-main)  3px solid;
     width: auto;
 }
 .Fourth button{
-    background: #0089ca;
+    background: var(--color-link) ;
     border-radius: 10px;
     text-align: center;
-    color: #fff;
+    color: var(--color-white) ;
     padding: 10px;
-    border: #0089ca 3px solid;
+    border: var(--color-main)  1px solid;
     margin-bottom: 22px;
+}
+.Fourth button:hover{
+    background: var(--color-hover) ;
 }
 .Fourth h2{
     font-size: 16px;
@@ -282,7 +331,7 @@ section {
 }
 .Fourth a{
     font-size: 14px;
-    color: #fff;
+    color: var(--color-white) ;
     font-weight: bold;
     border: none;
 }
@@ -291,15 +340,21 @@ section {
 }
 
 #footer{
-    background: #0089ac;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)),var(--color-main) ;
+    border-radius: 0px;
     padding: 15px;
     color: white;
-    height: 360px;
+    height: 285px;
     font-weight: bold;
     width: 100%;
 }
 #footer{
     width: 100%;
+}
+#footer h4{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)) var(--color-hover) ;
+    padding: 5px 0;
+    border-bottom: 2px solid red;
 }
 footer ul{
     float: left;
@@ -309,33 +364,34 @@ footer ul{
 }
 footer ul li{
     display: block;
+    margin-left: 20px;
     text-align: left;
 }
 footer ul li a{
     display: block;
-    color: #fff;
+    color: var(--color-white) ;
     text-align: left;
 }
 footer p{
     width: 100%;
     border-top: 4px solid black;
-    background: #0088ab;
-    color: #fff;
+    background:var(--color-main) ;
+    color: var(--color-white) ;
     font-weight: bold;
     text-align: center;
     padding: 10px;
 }
 footer h4{
     background: #00808a;
-    color: #fff;
+    color: var(--color-white) ;
 }
 
 
 .topbtn{
     transform: rotate(270deg);
-    color: #fff;
+    color: var(--color-white) ;
     font-size: 35px;
-    background: #ff0000;
+    background: var(--color-hover);
     border-radius: 50%;
     padding: 8px;
     height: 40px;
@@ -345,12 +401,16 @@ footer h4{
     position: fixed;
     float: right;
 }
+.topbtn:hover{
+    color: var(--color-white) ;
+    background: var(--color-main);
+}
 .botn{
     transform: rotate(90deg);
     margin-top: 53px;
-    color: #fff;
+    color: var(--color-white) ;
     font-size: 35px;
-    background: #ff0000;
+    background: var(--color-hover);
     border-radius: 100%;
     padding: 8px;
     height: 40px;
@@ -360,21 +420,40 @@ footer h4{
     position: fixed;
     float: right;
 }
+.botn:hover{
+    color: var(--color-white) ;
+    background: var(--color-main);
+}
 .toggle{
     height: 100px;
+    bottom: 49%;
+    position: fixed;
+    right: 20px;
+    cursor: pointer;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 99;
     float: right;
     margin-right: 57px;
 }
+
+
 /************ LOGIN MENU ***************/
+
+
 .login{
-    background: url(img/sgr.jpg) 0 0 no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/sgr.jpg) 0 0 no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100%;
 }
+.login a{
+    color: var(--color-white) ;
+}
 .login img{
     border-radius: 50%;
     height: 150px;
+    border: 20px solid var(--color-white) f;
     margin-top: -100px;
 }
 .loginform{
@@ -396,16 +475,17 @@ footer h4{
     line-height: 30px;
     padding: 10px 0;
     margin: 10px;
+    margin-left: 30px;
     width: 80%;
     border-radius: 8px;
     border: none;
     font-size: 20px;
-    padding-left: 9px;
+    padding-left: 20px;
     margin-top: 25px;
 }
 .loginform button{
-    background: #fff;
-    border: #0089ca;
+    background: var(--color-white) ;
+    border: var(--color-main) ;
     border-radius: 8px;
     padding: 10px;
 }
@@ -417,46 +497,85 @@ footer h4{
     margin-bottom: 20px;
 }
 .hedlogin h1{
-    color: #fff; 
+    color: var(--color-white) ; 
     font-size: 35px;
     margin-right: 50px;
 }
 .hedlogin a{
-    color: #fff;
+    color: var(--color-white) ;
 }
 
 
-/******************** Phone Version *****************/
+/************ Phone Version *************/
 
-@media (max-width: 874px){
+@media (max-width: 858px){
     #checkbtn{
-    color: #fff;
+    color: var(--color-white) ;
     font-size: 25px;
     float: right;
     line-height: 75px;
-    display: block;
+    display: inline-block;
     transform: rotate(90deg);
     margin-right: 30px;
     }
+    
+    header h1{
+    margin-left: 25%;
+    }
+    
+    header{
+   background: var(--color-main);  
+    height: 70px;
+    position: fixed;
+    z-index: 99;
+    }
+    
     nav ul{
         display: block;
-        background:  #0089ca;
-        width: 90%
+        background: transparent;
+        width: 100%;
+        display: inline-grid;
+        transition: ALL .5s ease ;
     }
     nav ul li{
         display: block;
         clear: both;
+        background: var(--color-hover) ;
+        border:  var(--color-main);
+        margin: 1px 0;
+        width: 90%;
     }
+    nav ul li a:hover{
+        background: var(--color-link) ;
+        color:  var(--color-white);
+        margin: 0;
+    }
+    
     nav ul li ul{
         position: inherit;
+        width: 97%;
+        border-radius: 0;
+        
     }
     nav ul li ul li{
-        margin: 0px;
+        margin: 3px 0px;
         display: block;
+        padding: 8px 0;
+        margin-left: 50px;
+        background: var(--color-link) ;
+        color: #0000;
         position: absolute
         width: 100%;
     }
+        
+    nav ul li ul li a:hover ,nav ul li ul li:hover{
+        padding: 8px;
+        background: var(--color-hover) ;
+        color: var(--color-white);
+    }
+    
     nav ul {
+        transition: ALL .5s ease ;
         display: none;
     }
     #check:checked ~ nav ul{
@@ -465,14 +584,33 @@ footer h4{
     section{
         border-radius: 0px;
     }
+    #first h1{
+        margin-top: 100px;
+    }
+    }
     .conhed{
         margin: 0px 20px 0px 0px;
     }
     #Second{
         margin-top: 250px;
+        float: none;
+        display: block;
+    }
+    #second .box{
+        margin-top: 15%;
+        float: none;
+        margin-left: 15%;
+        display: block;
     }
     #third{
-    margin-top: 1400px;
+    margin-top: 1590px;
+        float: none;
+        display: block;
+    }
+    #third .box{
+        float: none;
+        display: block;
+        z-index: 99;
     }
     .Fourth{
     text-align: center;
@@ -482,34 +620,56 @@ footer h4{
     display: block;
     }
     .Fourth img{
-    margin-top: -20%;
+    margin-top: -10%;
     }
     .Fourth button{
     margin-bottom: -10px;
     }
     .Fourth .box{
-    background: #fff;
+    background: var(--color-white) ;
     text-align: center;
     display: inline-block;
     margin: 5px;
-    margin-top: 90px;
-    width: 45%;
+    margin-top: 130px;
+    width: 65%;
     height: 180px;
-    border: #0089ca 3px solid;
+    border: var(--color-main)  3px solid;
     border-radius: 10px;
     box-shadow: 2px 2px 20px black;
-    float: left;
+    float: none;
     }
     footer{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.7)) var(--color-main);
     border-radius: 0px;
     margin: 0;
+    clear: both;
+    float: none;
     padding: 0;
-    height: 300px;
+    margin-top: 1700px;
+    height: 100%;
     }
     footer ul{
-    float: left;
-    width: 190px;
+    float: none;
+    width: 90%;
     height: auto;
     text-align: center;
+    }
+    footer ul li{
+    float: none;
+    display: block;
+    }
+    footer ul li:hover{
+    background: var(--color-hover);
+    padding-left: 9px;
+    }
+    footer p{
+    margin-top: 80%;
+    }
+    nav ul li ul{
+    left: -100%;
+    }
+    nav ul li:hover ul{
+    left: 0;
+    transition: ALL .5s ease;
     }
 }
